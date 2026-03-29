@@ -1,0 +1,526 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка и навигация */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #2c5282;
+}
+
+/* Основной контент */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    border-left: 4px solid #4299e1;
+    padding-left: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+    color: #4a5568;
+}
+
+/* Карточки постов */
+.post {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.post:hover {
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.post .meta {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 0.5rem;
+}
+
+.post .content {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+}
+
+/* Лайки и комментарии */
+.like-section, .like-count {
+    margin: 1rem 0 0.5rem;
+}
+
+.like-btn {
+    background: none;
+    border: 1px solid #cbd5e0;
+    border-radius: 40px;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #f7fafc;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.like-btn:hover {
+    background-color: #ebf4ff;
+    border-color: #4299e1;
+    color: #2b6cb0;
+}
+
+.like-count {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Комментарии */
+.comments {
+    margin: 1.5rem 0 0;
+    background-color: #f9fafb;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.comment {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.comment strong {
+    color: #2c5282;
+    font-weight: 600;
+}
+
+.comment-date {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-left: 0.5rem;
+}
+
+.comment p {
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: #2d3748;
+}
+
+/* Форма комментария */
+.comment-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+    transition: border 0.2s;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66,153,225,0.1);
+}
+
+.comment-form button {
+    align-self: flex-start;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+    background-color: #3182ce;
+}
+
+/* Кнопка удаления поста */
+.delete-post {
+    background: none;
+    border: 1px solid #fed7d7;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #c53030;
+    transition: all 0.2s;
+}
+
+.delete-post:hover {
+    background-color: #fff5f5;
+    border-color: #feb2b2;
+    color: #9b2c2c;
+}
+
+/* Формы (логин, регистрация, добавление поста) */
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border 0.2s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66,153,225,0.1);
+}
+
+form button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #3182ce;
+}
+
+/* Сообщения об успехе/ошибке */
+.success {
+    background-color: #c6f6d5;
+    color: #276749;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+    border-left: 4px solid #38a169;
+}
+
+.error {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+    border-left: 4px solid #e53e3e;
+}
+
+/* Кнопка выхода в шапке (можно выделить) */
+nav a[href="/logout.php"] {
+    color: #e53e3e;
+}
+
+nav a[href="/logout.php"]:hover {
+    color: #c53030;
+}
+
+/* Простые страницы (index, about) */
+.content-page {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Разделитель */
+hr {
+    margin: 2rem 0;
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+}
+/* Дополнительные стили для главной страницы */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stats-block, .recent-posts, .recent-comments, .action-block, .user-stats, .quote-block {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.stats-block:hover, .recent-posts:hover, .recent-comments:hover, .action-block:hover, .user-stats:hover, .quote-block:hover {
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.stats-block h2, .recent-posts h2, .recent-comments h2, .action-block h2, .user-stats h2, .quote-block h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-left: 3px solid #4299e1;
+    padding-left: 0.75rem;
+}
+
+.stats-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-block li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.recent-post {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.recent-post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.recent-post h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+.recent-post h3 a {
+    text-decoration: none;
+    color: #2d3748;
+    transition: color 0.2s;
+}
+
+.recent-post h3 a:hover {
+    color: #4299e1;
+}
+
+.recent-post .meta {
+    font-size: 0.75rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.read-more {
+    font-size: 0.85rem;
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.comment-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.comment-item strong {
+    color: #2c5282;
+}
+
+.comment-date {
+    font-size: 0.7rem;
+    color: #a0aec0;
+    margin-left: 0.5rem;
+}
+
+.comment-item p {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.comment-link {
+    font-size: 0.8rem;
+    color: #4299e1;
+    text-decoration: none;
+}
+
+.comment-link:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #3182ce;
+}
+
+.button.secondary {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+.button.secondary:hover {
+    background-color: #cbd5e0;
+}
+
+.quote-block blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: #2d3748;
+    border-left: 3px solid #4299e1;
+    padding-left: 1rem;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 0.5rem;
+}
+
+.welcome-block {
+    margin-bottom: 1rem;
+}
+
+.welcome-block h1 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.restore-post {
+    background: none;
+    border: 1px solid #c6f6d5;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #276749;
+    transition: all 0.2s;
+}
+
+.restore-post:hover {
+    background-color: #f0fff4;
+    border-color: #9ae6b4;
+    color: #22543d;
+}
